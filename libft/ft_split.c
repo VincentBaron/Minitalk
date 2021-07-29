@@ -6,13 +6,13 @@
 /*   By: vbaron <vbaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 13:14:59 by vbaron            #+#    #+#             */
-/*   Updated: 2020/05/03 23:35:31 by vbaron           ###   ########.fr       */
+/*   Updated: 2021/07/28 17:36:29 by vbaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		split_size(char const *s, char c)
+int	split_size(char const *s, char c)
 {
 	int	element;
 
@@ -39,7 +39,8 @@ char	*alloc_array(char const *s, char c)
 	i = 0;
 	while (s[i] != c && s[i])
 		i++;
-	if (!(array = (char *)malloc(sizeof(char) * (i + 1))))
+	array = (char *)malloc(sizeof(char) * (i + 1));
+	if (!array)
 		return (0);
 	i = 0;
 	while (s[i] != c && s[i])
@@ -58,7 +59,8 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	if (!(split = (char **)malloc(sizeof(char *) * (split_size(s, c)))))
+	split = (char **)malloc(sizeof(char *) * (split_size(s, c)));
+	if (!split)
 		return (0);
 	i = 0;
 	while (*s)

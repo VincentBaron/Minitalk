@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vincentbaron <vincentbaron@student.42.f    +#+  +:+       +#+        */
+/*   By: vbaron <vbaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 23:37:09 by vincentbaro       #+#    #+#             */
-/*   Updated: 2021/07/20 15:55:40 by vincentbaro      ###   ########.fr       */
+/*   Updated: 2021/07/28 17:16:01 by vbaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include <unistd.h>
-# include <stdio.h>
-# include <signal.h>
-# include "./libft/libft.h"
+#include <unistd.h>
+#include <stdio.h>
+#include <signal.h>
+#include "./libft/libft.h"
