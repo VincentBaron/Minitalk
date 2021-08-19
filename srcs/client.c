@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vincentbaron <vincentbaron@student.42.f    +#+  +:+       +#+        */
+/*   By: vbaron <vbaron@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/16 16:32:29 by vincentbaro       #+#    #+#             */
-/*   Updated: 2021/07/28 17:13:06 by vbaron           ###   ########.fr       */
+/*   Updated: 2021/08/19 10:49:50 by vbaron           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	bit_shift_handler(int pid, char *str)
 	while (str[i])
 	{
 		bit_shift = 0;
-		while (bit_shift < 7)
+		while (bit_shift < 8)
 		{
 			if ((str[i] >> bit_shift) & 1)
 				kill(pid, SIGUSR2);
 			else
 				kill(pid, SIGUSR1);
 			bit_shift++;
-			usleep(100);
+			usleep(200);
 		}
 		i++;
 	}
